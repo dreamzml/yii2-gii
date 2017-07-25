@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\dmodel;
+namespace dreamzml\gii\generators\dmodel;
 
 use Yii;
 use yii\db\ActiveQuery;

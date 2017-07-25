@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\thinkcontroller;
+namespace dreamzml\gii\generators\thinkcontroller;
 
 use Yii;
 use yii\gii\CodeFile;

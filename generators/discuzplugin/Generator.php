@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\discuzplugin;
+namespace dreamzml\gii\generators\discuzplugin;
 
 use Yii;
 use yii\db\ActiveQuery;

@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii;
+namespace dreamzml\gii;
 
 use Yii;
 use yii\base\BootstrapInterface;
@@ -45,9 +45,22 @@ class Module extends \yii\gii\Module implements BootstrapInterface
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'yii\gii\controllers';
+    public $controllerNamespace = '\yii\gii\controllers';
 
 
+    /**
+     * @inheritdoc
+     */
+    public function beforeAction($action)
+    {
+        if (!parent::beforeAction($action)) {
+            return false;
+        }
+
+        $this->setViewPath('@yii/gii/views');
+
+        return true;
+    }
 
     /**
      * Returns the list of the core code generator configurations.
@@ -56,13 +69,13 @@ class Module extends \yii\gii\Module implements BootstrapInterface
     protected function coreGenerators()
     {
         return array_merge( parent::coreGenerators(),  [
-            'dcrud' => ['class' => 'yii\gii\generators\dcrud\Generator'],
-            'dmodel' => ['class' => 'yii\gii\generators\dmodel\Generator'],
-            'thinkcrud' => ['class' => 'yii\gii\generators\thinkcrud\Generator'],
-            'thinkcontroller' => ['class' => 'yii\gii\generators\thinkcontroller\Generator'],
-            'ecstorecrud' => ['class' => 'yii\gii\generators\ecstorecrud\Generator'],
-            'discuzplugin' => ['class' => 'yii\gii\generators\discuzplugin\Generator'],
-            'wcrud' => ['class' => 'yii\gii\generators\wcrud\Generator'],
+            'dcrud' => ['class' => 'dreamzml\gii\generators\dcrud\Generator'],
+            'dmodel' => ['class' => 'dreamzml\gii\generators\dmodel\Generator'],
+            'thinkcrud' => ['class' => 'dreamzml\gii\generators\thinkcrud\Generator'],
+            'thinkcontroller' => ['class' => 'dreamzml\gii\generators\thinkcontroller\Generator'],
+            'ecstorecrud' => ['class' => 'dreamzml\gii\generators\ecstorecrud\Generator'],
+            'discuzplugin' => ['class' => 'dreamzml\gii\generators\discuzplugin\Generator'],
+            'wcrud' => ['class' => 'dreamzml\gii\generators\wcrud\Generator'],
         ]);
     }
 }

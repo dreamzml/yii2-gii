@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\thinkcrud;
+namespace dreamzml\gii\generators\thinkcrud;
 
 use Yii;
 use yii\db\ActiveQuery;
@@ -225,7 +225,7 @@ class Generator extends \yii\gii\Generator
             $viewPath = $this->getModelPath();
             $modelPath = "{$viewPath}/{$modelClassName}Model.class.php";
             $files[] = new CodeFile($modelPath, $this->render('model.php', $params));
-        
+
         }
 
         return $files;

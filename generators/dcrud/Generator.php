@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\dcrud;
+namespace dreamzml\gii\generators\dcrud;
 
 use Yii;
 use yii\db\ActiveRecord;

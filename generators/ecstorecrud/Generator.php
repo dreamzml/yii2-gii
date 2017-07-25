@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\gii\generators\ecstorecrud;
+namespace dreamzml\gii\generators\ecstorecrud;
 
 use Yii;
 use yii\db\ActiveQuery;
