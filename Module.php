@@ -57,6 +57,17 @@ class Module extends \yii\gii\Module implements BootstrapInterface
             return false;
         }
 
+        //add bootstrop alias
+        Yii::setAlias('@dreamzml', dirname(__DIR__));
+
+
+        list($basePath, $baseUrl) = Yii::$app->getAssetManager()
+                                        ->publish(Yii::getAlias('@dreamzml/yii2-gii/assets'));
+
+
+        Yii::$app->getView()->registerJsFile($baseUrl.'/dreamzml_gii.js');
+
+        //set views path
         $this->setViewPath('@yii/gii/views');
 
         return true;
