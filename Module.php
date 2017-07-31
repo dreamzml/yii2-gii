@@ -65,7 +65,7 @@ class Module extends \yii\gii\Module implements BootstrapInterface
                                         ->publish(Yii::getAlias('@dreamzml/yii2-gii/assets'));
 
 
-        Yii::$app->getView()->registerJsFile($baseUrl.'/dreamzml_gii.js');
+        Yii::$app->getView()->registerJsFile($baseUrl.'/dreamzml_gii.js', ['depends'=>['yii\gii\GiiAsset']]);
 
         //set views path
         $this->setViewPath('@yii/gii/views');
