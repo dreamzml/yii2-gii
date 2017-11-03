@@ -24,14 +24,14 @@ use yii\base\NotSupportedException;
  */
 class Generator extends \yii\gii\Generator
 {
-    public $db = 'dbdev';
+    public $db = 'db';
     public $ns = 'app\models';
     public $tableName;
     public $modelClass;
     public $baseClass = 'yii\db\ActiveRecord';
     public $generateRelations = true;
     public $generateLabelsFromComments = false;
-    public $useTablePrefix = false;
+    public $useTablePrefix = true;
     public $useSchemaName = true;
     public $generateQuery = false;
     public $queryNs = 'app\models';
